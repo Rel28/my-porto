@@ -49,7 +49,7 @@ const navLinks = [
 
 const socials = [
     { label: 'GitHub', href: 'https://github.com/Rel28', icon: <GithubIcon /> },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/verel-as-58091a252', icon: <LinkedinIcon /> },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/verelasb/', icon: <LinkedinIcon /> },
     { label: 'Instagram', href: 'https://www.instagram.com/verel_asb?igsi=MXJvbmFyazJ1dXg4YQ%3D%3D&utm_source=qr', icon: <InstagramIcon /> },
     { label: 'Email', href: 'mailto:vereladitya07@gmail.com', icon: <MailIcon /> },
 ]

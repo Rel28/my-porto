@@ -260,7 +260,7 @@ const HeroSection = () => {
                         className="flex items-center gap-3 justify-center lg:justify-start"
                     >
                         <Magnetic>
-                            <a href="https://www.linkedin.com/in/verel-as-58091a252" className="w-10 h-10 flex items-center justify-center bg-[#272729] text-white rounded-full">
+                            <a href="https://www.linkedin.com/in/verelasb/" className="w-10 h-10 flex items-center justify-center bg-[#272729] text-white rounded-full">
                                 <LinkedinIcon />
                             </a>
                         </Magnetic>
@@ -269,7 +269,8 @@ const HeroSection = () => {
                                 <GithubIcon />
                             </a>
                         </Magnetic>
-                        <motion.button
+                        <motion.a
+                            href="https://drive.google.com/file/d/1hhv8y99tRJF5IQJbtCB2Hma9zZzTt_sm/view?usp=sharing"
                             initial="rest"
                             animate="rest"
                             whileHover="hover"
@@ -305,7 +306,7 @@ const HeroSection = () => {
                                 </svg>
                             </motion.span>
                         </motion.span>
-                    </motion.button>
+                    </motion.a>
                     </motion.div>
                 </div>
             </div>
