@@ -115,7 +115,7 @@ const Contact = () => {
                 {/* Deskripsi */}
                 <motion.p
                     variants={itemV}
-                    className="font-sans font-medium text-gray-600 text-md mt-5 max-w-xl"
+                    className="font-sans font-medium text-gray-600 text-sm md:text-base mt-5 max-w-xl"
                 >
                     Whether it's a job opportunity, a collaboration, or a question about one of my projects, I'd love to hear from you. Feel free to reach out anytime.
                 </motion.p>

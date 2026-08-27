@@ -318,18 +318,20 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="w-full grid grid-cols-3 divide-x divide-gray-300 bg-white/35 backdrop-blur-sm border border-white/60 rounded-2xl py-8 mx-auto shadow-sm"
+                className="w-full grid grid-cols-3 divide-x divide-gray-300 bg-white/35 backdrop-blur-sm border border-white/60 rounded-xl sm:rounded-2xl py-4 sm:py-6 md:py-8 px-2 sm:px-4 mx-auto shadow-sm"
             >
                 {[
                     { num: '3', label: 'Years Coding' },
-                    { num: '4', label: 'Project Built' },
+                    { num: '4', label: 'Projects Built' },
                     { num: '10', label: 'Certificates' },
                 ].map((s) => (
-                    <div key={s.label} className="text-center">
-                        <p className="font-display text-3xl font-bold">
+                    <div key={s.label} className="text-center px-1 sm:px-2">
+                        <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                             {s.num}<span className="text-blue-500">+</span>
                         </p>
-                        <p className="font-sans text-gray-500 text-sm mt-1">{s.label}</p>
+                        <p className="font-sans text-gray-500 text-[11px] sm:text-xs md:text-sm mt-0.5 sm:mt-1 leading-snug">
+                            {s.label}
+                        </p>
                     </div>
                 ))}
             </motion.div>
@@ -382,7 +384,7 @@ const Home = () => {
                     {/* Left Side */}
                     <div className="flex flex-col gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                         <h1 className="font-display text-4xl lg:text-5xl text-[#272729] font-medium">About Me</h1>
-                        <p className="font-sans font-medium text-gray-600 text-md">
+                        <p className="font-sans font-medium text-gray-600 text-sm md:text-base">
                             I'm Verel, a Computer Science graduate from Udayana University, based in Bali. I love untangling hard problems, and once I take something on, I give it everything. Off screen, I recharge with strategy games, tennis, cycling, and the occasional piano session.
                         </p>
                         <motion.button
@@ -441,9 +443,9 @@ const Home = () => {
                     {/* Top Side */}
                     <div className="flex flex-col gap-6 max-w-2xl">
                         <h1 className="font-display text-4xl lg:text-5xl text-[#272729] font-medium text-center">My Projects</h1>
-                        <p className="font-sans font-medium text-gray-600 text-md text-center">
+                        <p className="font-sans font-medium text-gray-600 text-sm md:text-base text-center">
                             A selection of things I've built while learning and
-                            experimenting — from web apps and landing pages to mobile
+                            experimenting, from web apps and landing pages to mobile
                             and machine learning projects. Each one taught me something
                             new. Click a card to take a closer look.
                         </p>

@@ -89,37 +89,39 @@ const Projects = () => {
                                 className="flex flex-col bg-white/35 backdrop-blur-sm border border-white/40 rounded-lg shadow-sm overflow-hidden group"
                             >
                                 {/* Area gambar */}
-                                <div className="h-52 bg-gray-300 overflow-hidden">
+                                <div className="h-40 md:h-52 bg-gray-300 overflow-hidden">
                                     {project.image && (
                                         <img
                                             src={project.image}
                                             alt={project.title}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-cover
-                                                       group-hover:scale-105 transition-transform duration-500 ease-out"
+                                                    md:group-hover:scale-105 transition-transform duration-500 ease-out"
                                         />
                                     )}
                                 </div>
 
                                 {/* Badan kartu */}
-                                <div className="p-6 flex flex-col flex-1">
-                                    <span className="self-start inline-block font-sans text-xs font-medium uppercase tracking-wide text-indigo-500 border border-indigo-200 rounded-full px-3 py-1">
+                                <div className="p-4 md:p-6 flex flex-col flex-1">
+                                    <span className="self-start inline-block font-sans text-[10px] md:text-xs font-medium uppercase tracking-wide text-indigo-500 border border-indigo-200 rounded-full px-2.5 py-0.5 md:px-3 md:py-1">
                                         {project.tag}
                                     </span>
 
-                                    <h3 className="font-display text-3xl font-medium text-[#272729] mt-4 mb-2">
+                                    <h3 className="font-display text-2xl md:text-3xl font-medium text-[#272729] mt-3 md:mt-4 mb-1.5 md:mb-2 leading-tight">
                                         {project.title}
                                     </h3>
 
-                                    <p className="font-sans text-sm text-gray-600 mb-6">
+                                    <p className="font-sans text-xs md:text-sm text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
                                         {project.description}
                                     </p>
 
-                                    <hr className="border-gray-300 mb-6 mt-auto" />
+                                    <hr className="border-gray-300 mb-4 md:mb-6 mt-auto" />
 
                                     {/* Sekarang jadi Link ke halaman detail */}
                                     <Link
                                         to={`/projects/${project.slug}`}
-                                        className="font-display w-full text-center bg-[#272729] text-white text-sm font-medium py-3 rounded-md cursor-pointer"
+                                        className="font-display w-full text-center bg-[#272729] text-white text-xs md:text-sm font-medium py-2.5 md:py-3 rounded-md cursor-pointer"
                                     >
                                         View details
                                     </Link>

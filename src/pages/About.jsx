@@ -433,7 +433,7 @@ const About = () => {
                         <p className="font-display text-base md:text-lg text-gray-500 mb-4 md:mb-5">
                             Developer, Designer, & Software Engineering
                         </p>
-                        <p className="font-sans text-sm text-gray-600 max-w-md mx-auto md:mx-0">
+                        <p className="font-sans text-sm text-gray-600 max-w-md mx-auto md:mx-0 font-medium">
                             I'm Verel, a Computer Science graduate from Udayana University, based in Bali. I love untangling hard problems, and once I take something on, I give it everything. Off screen, I recharge with strategy games, tennis, cycling, and the occasional piano session.
                         </p>
                         <div className="mt-6">

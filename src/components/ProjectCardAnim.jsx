@@ -188,40 +188,42 @@ const ProjectCardAnim = () => {
                                         stiffness: 260,
                                         damping: 22,
                                     }}
-                                    className={`w-[300px] sm:w-[340px] shrink-0 flex flex-col bg-white/35 backdrop-blur-sm border rounded-lg overflow-hidden cursor-pointer
+                                    className={`w-[260px] md:w-[340px] shrink-0 flex flex-col bg-white/35 backdrop-blur-sm border rounded-lg overflow-hidden cursor-pointer
                                         ${isSelected
                                             ? 'border-[#272729]/30 shadow-xl'
                                             : 'border-white/40 shadow-sm'}`}
                                 >
-                                    <div className="h-52 bg-gray-300">
+                                    <div className="h-40 md:h-52 bg-gray-300">
                                         {project.image && (
                                             <img
                                                 src={project.image}
                                                 alt={project.title}
                                                 draggable={false}
+                                                loading="lazy"
+                                                decoding="async"
                                                 className="w-full h-full object-cover pointer-events-none"
                                             />
                                         )}
                                     </div>
 
-                                    <div className="p-6 flex flex-col flex-1">
-                                        <span className="self-start inline-block font-sans text-xs font-medium uppercase tracking-wide text-indigo-500 border border-indigo-200 rounded-full px-3 py-1">
+                                    <div className="p-4 md:p-6 flex flex-col flex-1">
+                                        <span className="self-start inline-block font-sans text-[10px] md:text-xs font-medium uppercase tracking-wide text-indigo-500 border border-indigo-200 rounded-full px-2.5 py-0.5 md:px-3 md:py-1">
                                             {project.tag}
                                         </span>
 
-                                        <h3 className="font-display text-3xl font-medium text-[#272729] mt-4 mb-2">
+                                        <h3 className="font-display text-2xl md:text-3xl font-medium text-[#272729] mt-3 md:mt-4 mb-1.5 md:mb-2 leading-tight">
                                             {project.title}
                                         </h3>
 
-                                        <p className="font-sans text-sm text-gray-600 mb-6">
+                                        <p className="font-sans text-xs md:text-sm text-gray-600 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
                                             {project.description}
                                         </p>
 
-                                        <hr className="border-gray-300 mb-6 mt-auto" />
+                                        <hr className="border-gray-300 mb-4 md:mb-6 mt-auto" />
 
                                         <Link
-                                        to={`/projects/${project.slug}`}
-                                        className="font-display w-full text-center bg-[#272729] text-white text-sm font-medium py-3 rounded-md cursor-pointer"
+                                            to={`/projects/${project.slug}`}
+                                            className="font-display w-full text-center bg-[#272729] text-white text-xs md:text-sm font-medium py-2.5 md:py-3 rounded-md cursor-pointer"
                                         >
                                             View details
                                         </Link>
