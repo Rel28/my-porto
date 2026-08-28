@@ -46,26 +46,29 @@ const Lightbox = ({ images, index, onClose, onPrev, onNext }) => {
                 {/* Panah kiri / kanan (muncul kalau gambar > 1) */}
                 {images.length > 1 && (
                     <>
-                        <button
-                            onClick={(e) => { e.stopPropagation(); onPrev() }}
-                            aria-label="Previous image"
-                            className="absolute left-3 md:left-8 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
-                        >
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-                        </button>
-                        <button
-                            onClick={(e) => { e.stopPropagation(); onNext() }}
-                            aria-label="Next image"
-                            className="absolute right-3 md:right-8 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
-                        >
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </button>
+                        <div className="pointer-events-none absolute inset-x-0 bottom-5 flex items-center justify-center gap-10
+                            md:inset-0 md:bottom-auto md:justify-between md:gap-0 md:px-3">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onPrev() }}
+                                aria-label="Previous image"
+                                className="pointer-events-auto w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
+                            >
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg>
+                            </button>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); onNext() }}
+                                aria-label="Next image"
+                                className="pointer-events-auto w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white cursor-pointer transition-colors"
+                            >
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
                     </>
                 )}
     

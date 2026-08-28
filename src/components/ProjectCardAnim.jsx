@@ -122,7 +122,7 @@ const ProjectCardAnim = () => {
     }
     const handlePan = (e, info) => {
         if (Math.abs(info.offset.x) > 5) pannedRef.current = true
-        baseX.set(baseX.get() + info.delta.x)
+        baseX.set(baseX.get() + info.delta.x * 2)
     }
     const handlePanEnd = (e, info) => {
         if (mode === 'focus') {
